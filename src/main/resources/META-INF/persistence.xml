@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="PruebaHTML" transaction-type="RESOURCE_LOCAL">
+        <class>Customer</class>
+        <class>Models.Equipos</class>
+        <class>Models.Juegos</class>
+        <class>Models.Partidas</class>
+        <class>Models.Pertenencias</class>
+        <class>Models.Peticiones</class>
+        <class>Models.Pistas</class>
+        <class>Models.Pruebas</class>
+        <class>Models.Resoluciones</class>
+        <class>Models.Usuarios</class>
+        <class>Modelos.Equipos</class>
+        <class>Modelos.Juegos</class>
+        <class>Modelos.Partidas</class>
+        <class>Modelos.Pertenencias</class>
+        <class>Modelos.Peticiones</class>
+        <class>Modelos.Pistas</class>
+        <class>Modelos.Respuestas</class>
+        <class>Modelos.Usuarios</class>
+        <class>Modelos.Pruebas</class>
+        <class>Modelos.Resoluciones</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/JPATut"/>
+            <property name="javax.persistence.jdbc.user" value="enrique"/>
+            <property name="javax.persistence.jdbc.password" value="123456789"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3307"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+
+
+        </properties>
+
+
+    </persistence-unit>
+
+</persistence>
