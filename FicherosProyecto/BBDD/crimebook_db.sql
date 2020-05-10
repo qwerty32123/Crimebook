@@ -23,7 +23,7 @@ id int unsigned not null,
 nombre varchar (50) not null,
 descExtendida varchar (1000),
 descBreve varchar (200),
-tipo enum ('Prueba normal','Prueba final') not null,
+tipo enum ('PruebaNormal','Pruebafinal') not null,
 dificultad enum ('Facil','Normal','Dificil'),
 url varchar (100),
 ayudaFinal varchar (200),
@@ -173,7 +173,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'La llave de la luz protege su nombre',
-'Prueba Normal',
+'PruebaNormal',
 'facil',
 'direccion.dominio/prueba1',
 null,
@@ -191,7 +191,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'Con tanta pastilla tengo claro de que me moriré',
-'Prueba Normal',
+'PruebaNormal',
 'facil',
 'direccion.dominio/prueba2',
 null,
@@ -209,7 +209,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'Si se donde empiezo sabré donde acabo',
-'Prueba Normal',
+'PruebaNormal',
 'facil',
 'direccion.dominio/prueba3',
 null,
@@ -226,7 +226,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'No hay más viejo que el qué se cree viejo, ya que la edad está en el cerebro',
-'Prueba Normal',
+'PruebaNormal',
 'normal',
 'direccion.dominio/prueba4',
 null,
@@ -244,7 +244,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'El piso y la puerta se esconden detrás de dos trampas X/X',
-'Prueba Normal',
+'PruebaNormal',
 'dificil',
 'direccion.dominio/prueba5',
 null,
@@ -262,7 +262,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 '248B42 14 C4113 21 3NCU3N7R42 102 NUM3R02 V3RD4D3R02',
-'Prueba Normal',
+'PruebaNormal',
 'normal',
 'direccion.dominio/prueba6',
 null,
@@ -280,7 +280,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'El azar eligió a mi padre y lo escondió en sus posaderas',
-'Prueba Normal',
+'PruebaNormal',
 'facil',
 'direccion.dominio/prueba7',
 null,
@@ -298,7 +298,7 @@ En realidad no contiene nada de interes. Solo es texto lorem ipsum para rellenar
 espacio y asi poder testar el campo descripcion extendida de las pruebas. Y ahora 
 voy a repetirlo de nuevo:',
 'Sabrás el número dónde está si sabes el valor de las letras',
-'Prueba Normal',
+'PruebaNormal',
 'dificil',
 'direccion.dominio/prueba8',
 null,

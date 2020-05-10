@@ -1,19 +1,33 @@
 package Modelos;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Pruebas {
+    //DECLARAMOS TODOS LOS ENUM QUE UTILIZAREMOS DESPUES
+
+    // Enum Columna dificultad
+    public enum Dificultad{
+        FACIL,
+        NORMAL,
+        DIFICIL
+
+    }
+    //Enum Tabla Pruebas columna tipo
+    public enum Tipo{
+        PRUEBANORMAL,
+        PRUEBAFINAL
+    }
+
+    //
+
     private Integer id;
     private String nombre;
     private String descExtendida;
     private String descBreve;
-    private Object tipo;
-    private Object dificultad;
+    private Tipo tipo;
+    private Dificultad dificultad;
     private String url;
     private String ayudaFinal;
 
@@ -58,22 +72,24 @@ public class Pruebas {
     }
 
     @Basic
-    @Column(name = "tipo", nullable = false)
-    public Object getTipo() {
+    @Column(columnDefinition = "ENUM('PRUEBANORMAL,PRUEBAFINAL')",name = "tipo", nullable = false)
+    @Enumerated(EnumType.STRING)
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(Object tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 
     @Basic
-    @Column(name = "dificultad", nullable = true)
-    public Object getDificultad() {
+    @Column(columnDefinition = "ENUM('Facil','Normal','Dificil')",name = "dificultad", nullable = true)
+    @Enumerated(EnumType.STRING)
+    public Dificultad getDificultad() {
         return dificultad;
     }
 
-    public void setDificultad(Object dificultad) {
+    public void setDificultad(Dificultad dificultad) {
         this.dificultad = dificultad;
     }
 
