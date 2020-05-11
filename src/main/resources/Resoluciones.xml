@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="ModelosPrueba.Resoluciones">
+        <table name="resoluciones" schema="crimeBook" catalog=""/>
+        <id-class class="ModelosPrueba.ResolucionesPK"/>
+        <attributes>
+            <id name="idPrueba">
+                <column name="idPrueba" precision="-1"/>
+            </id>
+            <id name="idEquipo">
+                <column name="idEquipo" precision="-1"/>
+            </id>
+            <basic name="resuelta">
+                <column name="resuelta" precision="1"/>
+            </basic>
+            <basic name="intentos">
+                <column name="intentos" precision="-1"/>
+            </basic>
+            <basic name="estrellas">
+                <column name="estrellas" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

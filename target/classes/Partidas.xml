@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="ModelosPrueba.Partidas">
+        <table name="partidas" schema="crimeBook" catalog=""/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="nombre">
+                <column name="nombre" length="50"/>
+            </basic>
+            <basic name="fechaCreacion">
+                <column name="fechaCreacion" precision="-1"/>
+            </basic>
+            <basic name="duracion">
+                <column name="duracion" precision="-1"/>
+            </basic>
+            <basic name="fechaInicio">
+                <column name="fechaInicio" precision="-1"/>
+            </basic>
+            <basic name="idJuego">
+                <column name="idJuego" precision="-1"/>
+            </basic>
+            <basic name="username">
+                <column name="username" length="15"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

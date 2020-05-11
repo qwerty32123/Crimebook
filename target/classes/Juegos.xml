@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="ModelosPrueba.Juegos">
+        <table name="juegos" schema="crimeBook" catalog=""/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="nombre">
+                <column name="nombre" length="50"/>
+            </basic>
+            <basic name="descExtendida">
+                <column name="descExtendida" nullable="false" length="1000"/>
+            </basic>
+            <basic name="descBreve">
+                <column name="descBreve" nullable="false" length="200"/>
+            </basic>
+            <basic name="fechaCreacion">
+                <column name="fechaCreacion" precision="-1"/>
+            </basic>
+            <basic name="username">
+                <column name="username" length="15"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

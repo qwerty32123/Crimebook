@@ -31,7 +31,7 @@ public class TestSystem {
             em.close();
         }
     }
-    public static void getcustomerz(int id) {
+    public static void getcustomer(int id) {
         EntityManager em = entityManagerFactory.createEntityManager();
         String query = "Select c from Customer c where c.id = :custID";
 

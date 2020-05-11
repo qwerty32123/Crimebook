@@ -50,7 +50,8 @@ public class TestSystem2 {
         }
     }
 
-    public static void getCustomer(int id) {
+    public static Boolean getCustomer(int id) {
+        boolean result = true;
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
         // the lowercase c refers to the object
@@ -68,11 +69,13 @@ public class TestSystem2 {
             System.out.println(cust.getfName() + " " + cust.getlName());
         }
         catch(NoResultException ex) {
-            ex.printStackTrace();
+            result = false;
         }
         finally {
             em.close();
+            return result;
         }
+
     }
 
     public static void getCustomers() {

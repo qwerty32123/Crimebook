@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="ModelosPrueba.Respuestas">
+        <table name="respuestas" schema="crimeBook" catalog=""/>
+        <id-class class="ModelosPrueba.RespuestasPK"/>
+        <attributes>
+            <id name="idPrueba">
+                <column name="idPrueba" precision="-1"/>
+            </id>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="respuesta">
+                <column name="respuesta" length="200"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
