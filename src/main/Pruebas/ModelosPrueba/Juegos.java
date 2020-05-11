@@ -1,9 +1,6 @@
 package ModelosPrueba;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
@@ -66,8 +63,9 @@ public class Juegos {
         this.fechaCreacion = fechaCreacion;
     }
 
-    @Basic
     @Column(name = "username", nullable = false, length = 15)
+    @ManyToOne(optional = false,cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Usuarios.class)
+    @JoinColumn(name ="username", referencedColumnName = "username")
     public String getUsername() {
         return username;
     }
