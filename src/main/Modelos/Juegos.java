@@ -1,4 +1,4 @@
-package ModelosCrimebook;
+package Modelos;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -11,7 +11,7 @@ public class Juegos {
     private String descExtendida;
     private String descBreve;
     private Date fechaCreacion;
-    private String username;
+    private Usuarios username;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -65,11 +65,11 @@ public class Juegos {
 
     @ManyToOne(optional = false,cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Usuarios.class)
     @JoinColumn(name ="username", referencedColumnName = "username",nullable = false)
-    public String getUsername() {
+    public Usuarios getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(Usuarios username) {
         this.username = username;
     }
 

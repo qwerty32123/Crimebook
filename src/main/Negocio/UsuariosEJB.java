@@ -1,4 +1,9 @@
 package Negocio;
 
-public class UsuariosEJB {
+public interface UsuariosEJB {
+    public void login();
+    public void registerUsuario();
+
+
+
 }

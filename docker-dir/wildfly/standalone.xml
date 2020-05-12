@@ -159,7 +159,7 @@
                     </security>
                 </datasource>
                 <datasource jndi-name="java:jboss/datasources/sii" pool-name="MySQL">
-                    <connection-url>jdbc:mysql://contmysql:3306/sii</connection-url>
+                    <connection-url>jdbc:mysql://contmysql:3306/crimebook</connection-url>
                     <driver>mysql</driver>
                     <security>
                         <user-name>siiuser</user-name>

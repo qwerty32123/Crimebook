@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@EnriqueMySQL" uuid="8c1e1e0e-965d-4b6d-9cad-f8786b582816">
+    <data-source source="LOCAL" name="@localhost" uuid="ce51efe7-784d-41b2-bf2e-8068b2eb2d34">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3307</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="PruebaHTML/Hibernate" uuid="520da096-7b85-44a6-95f7-18719c18d3a2">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-C:/Users/localhost/IdeaProjects/PruebaHTML/PruebaHTML/src/main/resources/META-INF/persistence.xml</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3307</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
     </data-source>
   </component>
 </project>

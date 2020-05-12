@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/estilos.css">
   <title>Crimebook</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
 
 <div id="id01" class="modal">
 
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="${pageContext.request.contextPath}/action_page.php" method="post">
 
 
     <div class="container">
@@ -51,7 +51,7 @@ modal = document.getElementById('id01');
 modal2 = document.getElementById("myForm");
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal ||  event.target == modal2) {
+    if (event.target === modal ||  event.target === modal2) {
         modal.style.display = "none";
         closeForm();
     }
@@ -72,12 +72,12 @@ function closeForm() {
 <br><br><br><br>
 <div class="logo">
   <a href="pagina_1.jsp" title="home page" target="_blank">
-      <img src="img/Logo.png" style="width:100%"></a>
+      <img src="resources/img/Logo.png" style="width:100%"></a>
 </div>
 <button class="botonadmin" onclick="openForm()"><span>ADMIN </span></button>
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form action="${pageContext.request.contextPath}/action_page.php" class="form-container">
 
 	<h2> ADMIN </h2>
     <input type="text" placeholder="Enter Email" name="email" required>

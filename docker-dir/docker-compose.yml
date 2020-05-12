@@ -9,5 +9,5 @@ services:
   contmysql:
     build: ./mysql
     ports:
-    - "3307:3306"
+    - "3306:3306"
     

@@ -1,4 +1,4 @@
-package ModelosCrimebook;
+package Modelos;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

@@ -1,4 +1,7 @@
 package Negocio;
 
-public class InformacionEJB {
+import Modelos.Informacion;
+
+public interface InformacionEJB {
+    public Informacion getInformacion();
 }

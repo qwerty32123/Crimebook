@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+  <h:outputStylesheet library="css" name="estilos.css"  />
+  <h:outputStylesheet library="css" name="PruebaPagina1.css"  />
+
+  <title>Crimebook</title>
+</h:head>
+<h:body>
+  <div class="letradefault">
+
+
+<div style="margin-top:8vh">
+
+  <br /><br />
+<p id="bienvenidos" >BIENVENIDOS AL</p>
+<p id="crimebook"> CRIMEBOOK</p>
+
+<!-- Boton que es -->
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-top:2vh" class="botonquees"><span>¿QUE ES?</span></button>
+
+<div id="id01" class="modal">
+
+  <h:form class="modal-content animate" action="${pageContext.request.contextPath}/action_page.php" method="post">
+
+
+    <div class="container">
+      <div class="letradefault">
+
+        <h2 id="queescrimebook" align="center"> ¿QUE ES? </h2>
+        <hr id="linea"/>
+        <div id="explicacioncrimebook">
+
+        <p>#{InfoCtrl.desc.desc}</p>
+
+
+        </div>
+       <!-- <hr id="linea2"/> -->
+      </div>
+    </div>
+  </h:form>
+</div>
+<script type="text/javascript">
+// Get the modal
+var modal, modal2;
+modal = document.getElementById('id01');
+modal2 = document.getElementById("myForm");
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal ||  event.target === modal2) {
+        modal.style.display = "none";
+        closeForm();
+    }
+}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+  function showRegister() {
+    var x = document.getElementById("buttonRegister");
+    if (x.style.display === "none") {
+      // Do something..
+      x.style.display = "block";
+    }
+    else if (x.style.display === "block"){
+      x.style.display = "none";
+
+    }
+  }
+
+
+
+</script>
+
+</div>
+
+<br/><br/><br/><br/>
+<div class="logo">
+  <a href="entrar_partida.xhtml" title="home page">
+    <img src="resources/img/Logo.png" style="width:100%">
+    </img></a>
+</div>
+    <p class="id">
+      Bienvenido a Crimebook
+      <span class="id">
+            INGRESA CODIGO DE PARTIDA POR FAVOR
+            </span>
+      &mdash; Ingresa tu usuarioindex y contraseña para iniciar &mdash;
+    </p>
+    <p class="od">
+      Bienvenido a Crimebook
+      <span class="od">
+            INGRESA CODIGO DE PARTIDA POR FAVOR
+            </span>
+      &mdash; Ingresa tu usuario y contraseña para iniciar &mdash;
+    </p>
+<button class="botonadmin" onclick="openForm()"><span>ADMIN </span></button>
+
+<div class="form-popup" id="myForm">
+  <h:form action="${pageContext.request.contextPath}/action_page.php" class="form-container">
+
+	<h2> ADMIN </h2>
+    <h:inputText type="text" pt:placeholder="Enter Email" name="email" required="false"/>
+    <h:inputText type="password" pt:placeholder="Enter Password" name="psw" required="false"/>
+    <div id="buttonRegister" style="display: none">
+    <h:inputText type="name" pt:placeholder="Enter Name" name="psw" required="false"/>
+    <h:inputText type="surnames" pt:placeholder="Enter surnames" name="psw" required="false"/>
+    <h:inputText type="usuario" pt:placeholder="Enter user" name="psw" required="false"/>
+    </div>
+
+    <button type="button" class="btn">Login</button>
+    <button type="button" class="btn" onclick="showRegister()">Register</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+
+
+  </h:form>
+</div>
+  </div>
+  </h:body>
+</html>

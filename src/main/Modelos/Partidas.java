@@ -1,4 +1,4 @@
-package ModelosCrimebook;
+package Modelos;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -11,8 +11,8 @@ public class Partidas {
     private Date fechaCreacion;
     private Integer duracion;
     private Date fechaInicio;
-    private Integer idJuego;
-    private String username;
+    private Juegos idJuego;
+    private Usuarios username;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -62,20 +62,20 @@ public class Partidas {
 
     @ManyToOne(optional = false,cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Juegos.class)
     @JoinColumn(name ="idJuego", referencedColumnName = "id",nullable = false)
-    public Integer getIdJuego() {
+    public Juegos getIdJuego() {
         return idJuego;
     }
 
-    public void setIdJuego(Integer idJuego) {
+    public void setIdJuego(Juegos idJuego) {
         this.idJuego = idJuego;
     }
     @ManyToOne(optional = false,cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Usuarios.class)
     @JoinColumn(name ="username", referencedColumnName = "username",nullable = false)
-    public String getUsername() {
+    public Usuarios getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(Usuarios username) {
         this.username = username;
     }
 
