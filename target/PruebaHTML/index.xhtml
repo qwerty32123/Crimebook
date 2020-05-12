@@ -113,18 +113,22 @@ function closeForm() {
 <div class="form-popup" id="myForm">
   <h:form action="${pageContext.request.contextPath}/action_page.php" class="form-container">
 
-	<h2> ADMIN </h2>
-    <h:inputText type="text" pt:placeholder="Enter Email" name="email" required="false"/>
-    <h:inputText type="password" pt:placeholder="Enter Password" name="psw" required="false"/>
+	<h2> Login </h2>
+    <h:inputText type="text" value="#{UsuarioCtrl.email}" pt:placeholder="Enter Email" name="email" required="false"/>
+    <h:inputText type="password" value="#{UsuarioCtrl.contraseña}" pt:placeholder="Enter Password" name="psw" required="false"/>
     <div id="buttonRegister" style="display: none">
-    <h:inputText type="name" pt:placeholder="Enter Name" name="psw" required="false"/>
-    <h:inputText type="surnames" pt:placeholder="Enter surnames" name="psw" required="false"/>
-    <h:inputText type="usuario" pt:placeholder="Enter user" name="psw" required="false"/>
+    <h:inputText type="name" value="#{UsuarioCtrl.nombre}" pt:placeholder="Enter Name" name="psw" required="false"/>
+    <h:inputText type="surnames" value="#{UsuarioCtrl.apellidos}" pt:placeholder="Enter surnames" name="psw" required="false"/>
+    <h:inputText type="usuario"  value="#{UsuarioCtrl.username}" pt:placeholder="Enter user" name="psw" required="false"/>
+      <h:inputText type="test"  value="#{UsuarioCtrl.showInfo}" pt:placeholder="Enter user" name="psw" required="false"/>
+
     </div>
 
-    <button type="button" class="btn">Login</button>
-    <button type="button" class="btn" onclick="showRegister()">Register</button>
+    <button type="button" value ="#{UsuarioCtrl.showInfo}" class="btn">Login</button>
+    <button type="button" class="btn">Register</button>
+    <button type="button" class="btn" onclick="showRegister()">Cambiar</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
 
 
 
