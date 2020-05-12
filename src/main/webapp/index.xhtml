@@ -120,11 +120,11 @@ function closeForm() {
     <h:inputText type="name" value="#{UsuarioCtrl.nombre}" pt:placeholder="Enter Name" name="psw" required="false"/>
     <h:inputText type="surnames" value="#{UsuarioCtrl.apellidos}" pt:placeholder="Enter surnames" name="psw" required="false"/>
     <h:inputText type="usuario"  value="#{UsuarioCtrl.username}" pt:placeholder="Enter user" name="psw" required="false"/>
-      <h:inputText type="test"  value="#{UsuarioCtrl.showInfo}" pt:placeholder="Enter user" name="psw" required="false"/>
 
     </div>
 
-    <button type="button" value ="#{UsuarioCtrl.showInfo}" class="btn">Login</button>
+    <button type="button"  class="btn">Login</button>
+    <h:commandButton value="submit" type="submit" action="#{UsuarioCtrl.guardarUsuario()}"/>
     <button type="button" class="btn">Register</button>
     <button type="button" class="btn" onclick="showRegister()">Cambiar</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

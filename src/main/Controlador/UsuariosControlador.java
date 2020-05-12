@@ -17,15 +17,12 @@ public class UsuariosControlador {
     private String contraseña;
     private String email;
     private String nombre;
-    private String showInfo;
 
-    public String getShowInfo() {
-        return showInfo;
-    }
-
-    public void setShowInfo(String showInfo) {
+    public void guardarUsuario() {
         usuariosEJB.registerUsuario(username,apellidos,contraseña,email,nombre);
     }
+
+
     public String getUsername() {
         return username;
     }
