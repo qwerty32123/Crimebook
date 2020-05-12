@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>HOLA</title>
+        <h:outputStylesheet library="css" name="estilos.css"  />
+    </h:head>
+
+    <h:body>
+
+    <div class="letradefault">
+
+        <br /><br /><br /><br /><br /><br />
+        <p id="codigo">CODIGO DE LA PARTIDA:</p>
+        <h:form>
+            <h:inputText value="#{partidaCtrl.codigo}" pt:placeholder="Introduzca aquí el código de la partida" />
+
+            <div class="posicionbotonsiguiente" style="width:100%">
+                <h:commandButton styleClass="botonsiguiente" />
+            </div>
+        </h:form>
+
+        <h2>ULTIMO GUARDADO</h2>
+        <p>#{partidaCtrl.ultimoGuardado.id}</p>
+
+        <h3>PARTIDAS</h3>
+        <ui:repeat value="#{partidaCtrl.partidas}" var="partida">
+            <p>Codigo: #{partida.id}</p>
+        </ui:repeat>
+
+
+
+    </div>
+
+
+    </h:body>
+</html>
