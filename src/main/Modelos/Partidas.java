@@ -1,16 +1,17 @@
 package Modelos;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Objects;
 
 @Entity
 public class Partidas {
     private Integer id;
     private String nombre;
-    private Date fechaCreacion;
+    private Timestamp fechaCreacion;
     private Integer duracion;
-    private Date fechaInicio;
+    private Timestamp fechaInicio;
     private Juegos idJuego;
     private Usuarios username;
 
@@ -34,11 +35,11 @@ public class Partidas {
     }
 
     @Column(name = "fechaCreacion", nullable = false)
-    public Date getFechaCreacion() {
+    public Timestamp getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Date fechaCreacion) {
+    public void setFechaCreacion(Timestamp fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -52,11 +53,13 @@ public class Partidas {
     }
 
     @Column(name = "fechaInicio", nullable = false)
-    public Date getFechaInicio() {
+    public Timestamp getFechaInicio() {
+        String s = new SimpleDateFormat("MM/dd/yyyy HH:mm").format(fechaInicio);
+
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(Timestamp fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 

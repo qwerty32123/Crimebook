@@ -22,26 +22,69 @@
         <h:form >
             <h:inputText class="inputtextcodigo" value="#{partidaCtrl.codigo}" pt:placeholder="Introduzca aquí el código de la partida" />
 
-            <div class="posicionbotonsiguiente" style="width:100%">
-                <h:link styleClass="botonsiguiente" pt:href="pagina2.jsp"/>
+            <div class="posicionbotonsiguiente" style="width:100%" >
+                <h:commandButton value="submit" styleClass="botonsiguiente" type="submit">
+                    <f:actionListener pt:href = "pagina_2.jsp" />
+                </h:commandButton>
+                <div class="logo">
+                    <a href="pagina_2.jsp" title="home page">
+                        <img src="resources/img/botonenviar.png" style="width:10%">
+                        </img></a>
+                </div>
+
+
+
+
+
+
+
 
 
             </div>
 
         </h:form>
 
-        <h2 class="letradefault">ULTIMA PARTIDA GUARDADA </h2>
-        <p>#{partidaCtrl.ultimoGuardado.nombre}</p>
 
 
 
 
 
-        <h3>Ultimas 5 Partidas:</h3>
 
-        <ui:repeat value="#{partidaCtrl.partidas}" var="partida" size="5">
-            <p>Nombre: #{partida.nombre}</p>
-        </ui:repeat>
+
+        <h:dataTable value="#{partidaCtrl.partidas}" var="o"
+                     styleClass="order-table"
+                     headerClass="order-table-header"
+                     rowClasses="order-table-odd-row,order-table-even-row"
+        >
+
+            <h:column>
+                <!-- column header -->
+                <f:facet name="header">IdPartida</f:facet>
+                <!-- row record -->
+                #{o.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Duracion</f:facet>
+                #{o.duracion}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">fechaCreacion</f:facet>
+                #{o.fechaCreacion}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">fechaInicio</f:facet>
+                #{o.fechaInicio}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre Partida</f:facet>
+                #{o.nombre}
+            </h:column>
+
+        </h:dataTable>
+
 
 
 

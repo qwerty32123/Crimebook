@@ -16,13 +16,15 @@ public class PartidaImpl implements PartidaEJB {
     @PersistenceContext(unitName = "PruebaHTML")
     private EntityManager em;
 
+
+
     @Override
     public void guardarPartida(Integer codigo) {
         Partidas p = new Partidas();
         p.setId(codigo);
         p.setDuracion(0);
-        p.setFechaCreacion(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
-        p.setFechaInicio(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
+        p.setFechaCreacion(new java.sql.Timestamp(Calendar.getInstance().getTime().getTime()));
+        p.setFechaInicio(new java.sql.Timestamp(Calendar.getInstance().getTime().getTime()));
         p.setUsername(buscarUsuarioUsername("enrique"));
         p.setIdJuego(buscarJuegoId(115));
 
@@ -34,7 +36,7 @@ public class PartidaImpl implements PartidaEJB {
 
     @Override
     public Partidas ultimaPartida() {
-        String jpql = "select p from Partidas p order by p.fechaCreacion desc ";
+        String jpql = "select p from Partidas p order by p.fechaCreacion  desc   ";
         Query q = em.createQuery(jpql);
         List<Partidas> partidas = q.getResultList();
 
@@ -62,8 +64,8 @@ public class PartidaImpl implements PartidaEJB {
 
     @Override
     public List<Partidas> todasLasPartidas() {
-        String jpql = "select p from Partidas p order by p.fechaCreacion desc";
-        Query q = em.createQuery(jpql);
+        String jpql = "select p from Partidas p order by p.fechaCreacion desc  ";
+        Query q = em.createQuery(jpql).setMaxResults(10);
         return q.getResultList();
     }
 

@@ -1,3 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 p.id{text-transform:uppercase;letter-spacing:.5em;display:inline-block;border:4px double rgba(255,255,255,0.25);border-width:4px 0;padding:1.5em 0em;position:absolute;right:60%;width:60em;margin-top:-500px}p.id span.id{font:700 4em/1 "Oswald", sans-serif;letter-spacing:0;padding:.25em 0 .325em;display:block;margin:0 auto;text-shadow:0 0 80px rgba(255,255,255,0.5);background:url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-animation:aitf 80s linear infinite;-webkit-transform:translate3d(0, 0, 0);-webkit-backface-visibility:hidden}@-webkit-keyframes aitf{0%{background-position:0% 50%}100%{background-position:100% 50%}}
 p.od{text-transform:uppercase;letter-spacing:.5em;display:inline-block;border:4px double rgba(255,255,255,0.25);border-width:4px 0;padding:1.5em 0em;position:absolute;left:60%;width:60em;margin-top:-500px}p.od span.od{font:700 4em/1 "Oswald", sans-serif;letter-spacing:0;padding:.25em 0 .325em;display:block;margin:0 auto;text-shadow:0 0 80px rgba(255,255,255,0.5);background:url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-animation:aitf 80s linear infinite;-webkit-transform:translate3d(0, 0, 0);-webkit-backface-visibility:hidden}@-webkit-keyframes aitf{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+/*Tabla de entrar partida pagina1*/
+.order-table{
+    border-collapse:collapse;
+    border-bottom: 400px;
+}
 
+.order-table-header{
+    text-align:center;
+    background:none repeat scroll 0 0 #E5E5E5;
+    border-bottom:1px solid #BBBBBB;
+    padding:16px;
+}
+
+.order-table-odd-row{
+    text-align:center;
+    background:none repeat scroll 0 0 #FFFFFFF;
+    border-top:1px solid #BBBBBB;
+}
+
+.order-table-even-row{
+    text-align:center;
+    background:none repeat scroll 0 0 #F9F9F9;
+    border-top:1px solid #BBBBBB;
+}
