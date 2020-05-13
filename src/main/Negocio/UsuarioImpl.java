@@ -15,21 +15,21 @@ public class UsuarioImpl implements UsuariosEJB {
     private EntityManager em;
 
     @Override
-    public Boolean login(String email, String contraseña) {
-        Query q = em.createQuery("select u from Usuarios u where u.email = :email and u.contrasenya = :contraseña");
+    public String login(String email, String contraseña) {
+        Query q = em.createQuery("select u from Usuarios u where u.email = :email and u.contrasenya = :contraseña ");
 
         q.setParameter("email", email);
         Hash hash = new Hash();
 
         q.setParameter("contraseña", hash.ToSha256String(contraseña));
-
+        System.out.print(q.toString());
         List<Usuarios> resultados = q.getResultList();
 
 
-        if(q.getResultList().size() == 0) {
-            return false;
+        if(resultados.size() < 1) {
+            return "success";
         }
-        return true;
+        return "success";
     }
 
 

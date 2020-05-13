@@ -21,6 +21,9 @@ public class UsuariosControlador {
     public void guardarUsuario() {
         usuariosEJB.registerUsuario(username,apellidos,contraseña,email,nombre);
     }
+    public String validate(){
+        return usuariosEJB.login(email,contraseña);
+    }
 
 
     public String getUsername() {
