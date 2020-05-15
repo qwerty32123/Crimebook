@@ -69,6 +69,7 @@ public class Pruebas {
 
     @Basic
     @Column(name = "tipo", nullable = false)
+    @Enumerated(EnumType.STRING)
     public Tipo getTipo() {
         return tipo;
     }
@@ -79,6 +80,7 @@ public class Pruebas {
 
     @Basic
     @Column(name = "dificultad", nullable = true)
+    @Enumerated(EnumType.STRING)
     public Dificultad getDificultad() {
         return dificultad;
     }

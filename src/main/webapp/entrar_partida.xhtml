@@ -23,14 +23,9 @@
             <h:inputText class="inputtextcodigo" value="#{partidaCtrl.codigo}" pt:placeholder="Introduzca aquí el código de la partida" />
 
             <div class="posicionbotonsiguiente" style="width:100%" >
-                <h:commandButton value="submit" styleClass="botonsiguiente" type="submit">
-                    <f:actionListener pt:href = "pagina_2.jsp" />
+                <h:commandButton value="submit" styleClass="botonsiguiente" action="#{partidaCtrl.toPagina2}" type="submit">
                 </h:commandButton>
-                <div class="logo">
-                    <a href="pagina_2.jsp" title="home page">
-                        <img src="resources/img/botonenviar.png" style="width:10%">
-                        </img></a>
-                </div>
+
 
 
 

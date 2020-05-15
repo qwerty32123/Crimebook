@@ -8,6 +8,10 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
 <h:head>
+    <f:metadata> <f:viewParam name="codigo" value="#{partidaCtrl.codigo}"/>
+
+    </f:metadata>
+
     <title>Crimebook</title>
 
     <h:outputStylesheet library="css" name="estilos.css"  />
@@ -19,8 +23,8 @@
     <div>
         <table class="tablacodigo">
             <tr >
-                <th style="color:white">Codigo:</th>
-                <th class="codigoprogramado">AAAAA</th>
+                <th style="color:white">Codigo: #{partidaCtrl.codigo}</th>
+
             </tr>
         </table>
     </div>

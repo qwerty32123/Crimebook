@@ -123,10 +123,8 @@ function closeForm() {
 
     </div>
 
-    <button type="button"  class="btn">Login</button>
-    <h:commandButton value="login" type="submit" action="#{UsuarioCtrl.validate()}"/>
-
-    <h:commandButton value="submit" type="submit" action="#{UsuarioCtrl.guardarUsuario()}"/>
+    <h:commandButton value="login" styleClass="btn" type="submit" action="#{UsuarioCtrl.validate()}"/>
+    <h:commandButton value="submit" styleClass="btn" type="submit" action="#{UsuarioCtrl.guardarUsuario()}"/>
     <button type="button" class="btn">Register</button>
     <button type="button" class="btn" onclick="showRegister()">Cambiar</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

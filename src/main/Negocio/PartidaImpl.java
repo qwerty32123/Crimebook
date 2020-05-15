@@ -36,7 +36,7 @@ public class PartidaImpl implements PartidaEJB {
 
     @Override
     public Partidas ultimaPartida() {
-        String jpql = "select p from Partidas p order by p.fechaCreacion  desc   ";
+        String jpql = "select p from Partidas p order by p.fe  desc   ";
         Query q = em.createQuery(jpql);
         List<Partidas> partidas = q.getResultList();
 

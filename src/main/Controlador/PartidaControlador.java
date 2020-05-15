@@ -17,13 +17,27 @@ public class PartidaControlador {
     private Integer codigo;
     private Partidas ultimoGuardado;
     private List<Partidas> partidas;
+    private Integer ultimoCodigo;
+
+    public Integer getUltimoCodigo() {
+        return ultimoCodigo;
+    }
+
+    public void setUltimoCodigo(Integer ultimoCodigo) {
+        this.ultimoCodigo = ultimoCodigo;
+    }
 
     public Integer getCodigo() {
         return codigo;
     }
 
     public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+    public String toPagina2(){
         partidaEJB.guardarPartida(codigo);
+        return "pagina2.xhtml?faces-redirect=true&codigo="+codigo;
+
     }
 
     public Partidas getUltimoGuardado() {
