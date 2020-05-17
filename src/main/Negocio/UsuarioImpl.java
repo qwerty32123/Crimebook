@@ -27,7 +27,7 @@ public class UsuarioImpl implements UsuariosEJB {
 
 
         if(resultados.size() < 1) {
-            return "success";
+            return "failed";
         }
         return "success";
     }
